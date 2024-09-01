@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.fernandocanabarro.desafio_bossabox_tools.dtos.ToolDTO;
+import com.fernandocanabarro.desafio_bossabox_tools.openapi.ToolControllerOpenAPI;
 import com.fernandocanabarro.desafio_bossabox_tools.services.ToolService;
 
 import jakarta.validation.Valid;
@@ -26,7 +27,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/tools")
 @RequiredArgsConstructor
-public class ToolController {
+public class ToolController implements ToolControllerOpenAPI{
 
     private final ToolService toolService;
 
