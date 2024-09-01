@@ -3,6 +3,8 @@ package com.fernandocanabarro.desafio_bossabox_tools.dtos;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fernandocanabarro.desafio_bossabox_tools.entities.Tool;
 
 import jakarta.validation.constraints.NotBlank;
@@ -16,7 +18,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ToolDTO {
+public class ToolDTO extends RepresentationModel<ToolDTO>{
 
     private String id;
     @NotBlank(message = "Campo Requerido")
